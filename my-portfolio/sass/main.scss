@@ -1,0 +1,111 @@
+// google fonts
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+// variable
+$btn-color:#fb839e;
+$bg-black-900:#000000;
+$bg-black-100:#dddddd;
+$bg-black-50:#eff0f4;
+$text-black-900:#000000;
+$text-black-700:#dddddd;
+$text-black-600:#666666;
+$text-black-300:#bbbbbb;
+$outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+$outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+$inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+// global style
+*:not(i){
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    font-size: 16;
+    line-height: 1.5;
+    overflow-x: hidden;
+    background-color: $bg-black-50;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+span{
+    display: inline-block;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img{
+    vertical-align: middle;
+    max-width: 100%;
+}
+// similar in classes
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.align-items-center{
+    align-items: center;
+}
+.column-100{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.column-50{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.column-60{
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+.column-40{
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+.full-screen{
+    height: 100vh;
+}
+.outer-shadow{
+    box-shadow: $outer-shadow
+}
+.hover-in-shadow:hover{
+    box-shadow: $inner-shadow;
+}
+.outer-shadow-0{
+    box-shadow: $outer-shadow
+}
+.inner-shadow{
+    box-shadow: $inner-shadow;
+}
+.anchor-btn{
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin-top: 20px;
+    font-size:16px;
+    font-weight: 500;
+    color: $btn-color;
+}
+.effect{
+    position: absolute;
+}
+// import file
+@import "header&nav.scss";
+@import "banner-section.scss";
+@import "about-section.scss";

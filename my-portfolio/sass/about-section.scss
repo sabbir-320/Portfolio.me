@@ -1,0 +1,67 @@
+.about-section {
+  .section-title {
+    padding: 80px 0;
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      color: $text-black-900;
+      font-weight: 700;
+    }
+    h2::before {
+      content: attr(data-heading);
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+      color: $btn-color;
+    }
+  }
+  .about-img {
+    .img-box {
+        max-width: 100%;
+        padding: 15px;
+        img{ 
+            padding: 15px;
+        }
+    }
+    .social-link {
+        padding: 20px 0;
+        text-align: center;
+        a{
+           width: 40px;
+           height: 40px;
+           border-radius: 50%;
+           line-height: 40px;
+           margin: 0 5px;
+           font-size: 16px;
+           font-weight: 700;
+           color: $btn-color;
+        }
+    }
+  }
+  .about-text {
+      padding-left: 50px;
+      span{
+          font-size: large;
+      }
+      a{
+          margin: 30px 5px 0 ;
+          font-size: 16px;
+          font-weight: 600;
+      }
+  }
+}
+.about-tabs{
+  text-align: center;
+  padding: 60px 15px 50px;
+  span{
+    margin: 0 8px;
+    color: $text-black-600;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+  span.active{
+    color: $btn-color;
+  }
+}

@@ -1,0 +1,95 @@
+// header section
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 15px;
+  // visibility: hidden;
+  .logo {
+    a {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 33px;
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $btn-color;
+        border: 2px solid $btn-color;
+        border-radius: 50%;
+    }
+  }
+  .hamburger-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    span {
+        width: 16px;
+        height: 2px;
+        background-color: $bg-black-900;
+        position: relative;
+    }
+    span::before,span::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: $bg-black-900;
+        position: absolute;
+        left: 0;
+    }
+    span::before{
+        top: -6px;
+    }
+    span::after{
+        top: 6px;
+    }
+  }
+}
+// Navigation menu
+.nav-menu{
+// display: none;
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  .close-nav-menu{
+    background-color: $bg-black-50;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 40px;
+    color: $text-black-600;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  .inner-nav-menu{
+    min-height: 100vh;
+    ul{
+      padding: 20px;
+      li{
+        margin: 20px 0;
+        text-align: center;
+        a{
+          padding: 10px 20px;
+          border-radius: 30px;
+          color: $text-black-600;
+          font-size: 20px;
+          font-weight: 600;
+          overflow-y: auto;
+        }
+        a.active{
+        color: $btn-color;
+        }
+      }
+    }
+  }
+}
