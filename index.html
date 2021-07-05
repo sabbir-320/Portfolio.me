@@ -15,32 +15,32 @@
 
 <body>
   <!-- header -->
-  <header class="header">
+  <header class="header-section">
     <div class="container">
       <div class="row justify-content-between">
         <div class="logo">
           <a href="index.html">s</a>
         </div>
-        <div class="hamburger-btn outer-shadow hover-in-shadow row justify-content-center align-items-center">
+        <div class="hamburger-btn outer-shadow hover-in-shadow row justify-content-center align-items-center"  onclick="openNavMenu()">
           <span></span>
         </div>
       </div>
     </div>
   </header>
   <!-- Navigation menu -->
-  <div class="nav-menu">
-    <div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
+  <nav class="nav-menu">
+    <div class="close-nav-menu outer-shadow hover-in-shadow" onclick="closeNabMenu()">&times;</div>
     <div class="inner-nav-menu row align-items-center justify-content-center">
       <ul>
-        <li><a href="#" class="inner-shadow hover-in-shadow active">Home</a></li>
-        <li><a href="#" class="outer-shadow hover-in-shadow">about</a></li>
-        <li><a href="#" class="outer-shadow hover-in-shadow">services</a></li>
-        <li><a href="#" class="outer-shadow hover-in-shadow">portfolio</a></li>
-        <li><a href="#" class="outer-shadow hover-in-shadow">testimonial</a></li>
-        <li><a href="#" class="outer-shadow hover-in-shadow">contact</a></li>
+        <li><a href="index.html" class="outer-shadow hover-in-shadow active" onclick="homeNav(this)">Home</a></li>
+        <li><a href="#aboutSecton" class="outer-shadow hover-in-shadow" onclick="aboutNav(this)">about</a></li>
+        <li><a href="#servicesSection" class="outer-shadow hover-in-shadow" onclick="servicesNav(this)">services</a></li>
+        <li><a href="#portfolioSection" class="outer-shadow hover-in-shadow" onclick="portfolioNav(this)">portfolio</a></li>
+        <!-- <li><a href="#testimonial" class="outer-shadow hover-in-shadow">testimonial</a></li> -->
+        <li><a href="#contactSection" class="outer-shadow hover-in-shadow" onclick="contactNav(this)">contact</a></li>
       </ul>
     </div>
-  </div>
+  </nav>
   <!-- banner section -->
   <section class="banner-section">
     <!-- effect -->
@@ -97,7 +97,7 @@
           <p>Hello</p>
           <h2>I'm Sabbir</h2>
           <h1>Front-End Web Developer</h1>
-          <a href="#" class="anchor-btn outer-shadow hover-in-shadow">More About Me</a>
+          <a href="#aboutSecton" class="anchor-btn outer-shadow hover-in-shadow">More About Me</a>
         </div>
         <div class="column-50 banner-img row justify-content-center">
           <div class="img-box inner-shadow">
@@ -108,7 +108,7 @@
     </div>
   </section>
   <!-- About Section -->
-  <section class="about-section full-screen">
+  <section class="about-section" id="aboutSecton">
     <div class="container">
       <div class="row">
         <div class="section-title column-100">
@@ -121,10 +121,10 @@
             <img src="img/profile-pic.png" alt="profile-pic" class="outer-shadow">
           </div>
           <div class="social-link row justify-content-center">
-            <a href="#" class="outer-shadow hover-in-shadow"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="outer-shadow hover-in-shadow"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="outer-shadow hover-in-shadow"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="outer-shadow hover-in-shadow"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/sabbir195661/" class="outer-shadow hover-in-shadow"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/sabbir_320" class="outer-shadow hover-in-shadow"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/sabbir_320/" class="outer-shadow hover-in-shadow"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/sabbir320/" class="outer-shadow hover-in-shadow"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
         <div class="about-text column-60">
@@ -138,66 +138,300 @@
             maiores autem doloribus ipsa at saepe reiciendis, dicta dolor recusandae odit? Modi commodi, tenetur quos ea
             iusto sapiente eius voluptate nemo cumque eaque!</p>
           <a href="cv.pdf" class="anchor-btn outer-shadow hover-in-shadow">Download CV</a>
-          <a href="#" class="anchor-btn outer-shadow hover-in-shadow">Hire Me</a>
+          <a href="#contactSection" class="anchor-btn outer-shadow hover-in-shadow">Hire Me</a>
         </div>
       </div>
       <!-- about tabs -->
       <div class="row">
-        <div class="about-tabs column-100">
-          <span class="anchor-btn tab-item inner-shadow hover-in-shadow active">skills</span>
-          <span class="anchor-btn tab-item outer-shadow hover-in-shadow">experience</span>
-          <span class="anchor-btn tab-item outer-shadow hover-in-shadow">education</span>
+        <div class="tab-wrapper column-100">
+          <span class="anchor-btn tab-item inner-shadow hover-in-shadow active" onclick="skillsTab(this)">skills</span>
+          <span class="anchor-btn tab-item outer-shadow hover-in-shadow" onclick="expTab(this)">experience</span>
+          <span class="anchor-btn tab-item outer-shadow hover-in-shadow" onclick="educationTab(this)">education</span>
         </div>
       </div>
       <!-- skills item -->
-      <div class="skills-wrapper row">
-        <div class="column-50">
-          <ul>
-            <li class="html">html <span>90%</span></li>
-            <li class="css">css <span>85%</span></li>
-            <li class="js">js <span>70%</span></li>
-          </ul>
-        </div>
-        <div class="column-50">
-          <ul>
-            <li class="bootstrap">bootstrap<span>90%</span></li>
-            <li class="sass">sass <span>99%</span></li>
-            <li class="react">react <span>80%</span></li>
-          </ul>
+      <div class="skills-wrapper display-block">
+        <div class="row">
+          <div class="column-50">
+            <ul class="ul-left">
+              <li class="html">html <span>90%</span></li>
+              <li class="css">css <span>85%</span></li>
+              <li class="js">js <span>70%</span></li>
+            </ul>
+          </div>
+          <div class="column-50">
+            <ul class="ul-right">
+              <li class="bootstrap">bootstrap<span>90%</span></li>
+              <li class="sass">sass <span>99%</span></li>
+              <li class="react">react <span>80%</span></li>
+            </ul>
+          </div>
         </div>
       </div>
       <!-- experience item -->
-      <div class="exp-wrapper row">
+      <div class="exp-wrapper row display-none">
         <div class="timeline column-100">
           <div class="left-item">
+            <i class="fas fa-briefcase"></i>
             <div class="content outer-shadow">
-              <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea
-                mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto
-                primis ea eam.</p>
+              <span>2020 - present</span>
+              <h3>Front-End Developer</h3>
+              <h4>company name, Bangladesh</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dignissimos sit dolorem
+                nisi</p>
             </div>
           </div>
           <div class="right-item">
+            <i class="fas fa-briefcase"></i>
             <div class="content outer-shadow">
-              <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea
-                mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto
-                primis ea eam.</p>
+              <span>2020 - present</span>
+              <h3>Front-End Developer</h3>
+              <h4>company name, Bangladesh</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dignissimos sit dolorem
+                nisi</p>
             </div>
           </div>
           <div class="left-item">
+            <i class="fas fa-briefcase"></i>
             <div class="content outer-shadow">
-              <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea
-                mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto
-                primis ea eam.</p>
-            </div>
-          </div>
-          <div class="right-item">
-            <div class="content outer-shadow">
-              <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea
-                mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto
-                primis ea eam.</p>
+              <span>2020 - present</span>
+              <h3>Front-End Developer</h3>
+              <h4>company name, Bangladesh</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dignissimos sit dolorem
+                nisi</p>
             </div>
           </div>
         </div>
+      </div>
+      <!-- education tab -->
+      <div class="education-wrapper row display-none">
+        <div class="timeline column-100">
+          <div class="left-item">
+            <i class="fas fa-graduation-cap"></i>
+            <div class="content outer-shadow">
+              <span>2020 - present</span>
+              <h3>Mawlana</h3>
+              <h4>company name, Bangladesh</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dignissimos sit dolorem
+                nisi</p>
+            </div>
+          </div>
+          <div class="right-item">
+            <i class="fas fa-graduation-cap"></i>
+            <div class="content outer-shadow">
+              <span>2020 - present</span>
+              <h3>Front-End Developer</h3>
+              <h4>company name, Bangladesh</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dignissimos sit dolorem
+                nisi</p>
+            </div>
+          </div>
+          <div class="left-item">
+            <i class="fas fa-graduation-cap"></i>
+            <div class="content outer-shadow">
+              <span>2020 - present</span>
+              <h3>Front-End Developer</h3>
+              <h4>company name, Bangladesh</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dignissimos sit dolorem
+                nisi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- services section -->
+  <section class="service-section" id="servicesSection">
+    <div class="container">
+      <div class="row">
+        <div class="section-title column-100">
+          <h2 data-heading="services">what i do</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="column-33 row">
+          <div class="cart outer-shadow">
+            <div class="cart-body">
+              <div class="icon-box inner-shadow">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3>Responsive design</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, velit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="column-33 row">
+          <div class="cart outer-shadow">
+            <div class="cart-body">
+              <div class="icon-box inner-shadow">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3>web design</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, laboriosam!</p>
+            </div>
+          </div>
+        </div>
+        <div class="column-33 row">
+          <div class="cart outer-shadow">
+            <div class="cart-body">
+              <div class="icon-box inner-shadow">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3>clean code</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, inventore!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- portfolio section -->
+  <section class="portfolio-section" id="portfolioSection">
+    <div class="container">
+      <div class="row">
+        <div class="section-title column-100">
+          <h2 data-heading="portfolio">latest works</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="column-33 row">
+          <div class="cart outer-shadow ">
+            <div class="cart-body">
+              <div class="cart-img">
+                <img src="img/portfolio/thumb/temperature-hot.PNG" alt="temperature-hot">
+                <div class="hide-link">
+                  <a href="https://sabbir-320.github.io/Temperature-Hot/" class="anchor-btn">Live</a>
+                  <a href="https://github.com/sabbir-320/Temperature-Hot" class="anchor-btn">Github</a>
+                </div>
+              </div>
+              <p>Temperature Hot</p>
+            </div>
+          </div>
+        </div>
+        <div class="column-33 row">
+          <div class="cart outer-shadow">
+            <div class="cart-body">
+              <div class="cart-img">
+                <img src="img/portfolio/thumb/hungry-monster.PNG" alt="hungry-monster">
+                <div class="hide-link">
+                  <a href="https://sabbir-320.github.io/Temperature-Hot/" class="anchor-btn">Live</a>
+                  <a href="https://github.com/sabbir-320/Temperature-Hot" class="anchor-btn">Github</a>
+                </div>
+              </div>
+              <p>Hungry Monster</p>
+            </div>
+          </div>
+        </div>
+        <div class="column-33 row">
+          <div class="cart outer-shadow">
+            <div class="cart-body">
+              <div class="cart-img">
+                <img src="img/portfolio/thumb/discover-fly.PNG" alt="discover-fly">
+                <div class="hide-link">
+                  <a href="https://sabbir-320.github.io/Temperature-Hot/" class="anchor-btn">Live</a>
+                  <a href="https://github.com/sabbir-320/Temperature-Hot" class="anchor-btn">Github</a>
+                </div>
+              </div>
+              <p>Discover Fly</p>
+            </div>
+          </div>
+        </div>
+        <div class="column-33 row">
+          <div class="cart outer-shadow">
+            <div class="cart-body">
+              <div class="cart-img">
+                <img src="img/portfolio/thumb/discover-fly.PNG" alt="discover-fly">
+                <div class="hide-link">
+                  <a href="https://sabbir-320.github.io/Temperature-Hot/" class="anchor-btn">Live</a>
+                  <a href="https://github.com/sabbir-320/Temperature-Hot" class="anchor-btn">Github</a>
+                </div>
+              </div>
+              <p>Discover Fly</p>
+            </div>
+          </div>
+        </div>
+        <div class="column-33 row">
+          <div class="cart outer-shadow">
+            <div class="cart-body">
+              <div class="cart-img">
+                <img src="img/portfolio/thumb/discover-fly.PNG" alt="discover-fly">
+                <div class="hide-link">
+                  <a href="https://sabbir-320.github.io/Temperature-Hot/" class="anchor-btn">Live</a>
+                  <a href="https://github.com/sabbir-320/Temperature-Hot" class="anchor-btn">Github</a>
+                </div>
+              </div>
+              <p>Discover Fly</p>
+            </div>
+          </div>
+        </div>
+        <div class="column-33 row">
+          <div class="cart outer-shadow">
+            <div class="cart-body">
+              <div class="cart-img">
+                <img src="img/portfolio/thumb/discover-fly.PNG" alt="discover-fly">
+                <div class="hide-link">
+                  <a href="https://sabbir-320.github.io/Temperature-Hot/" class="anchor-btn">Live</a>
+                  <a href="https://github.com/sabbir-320/Temperature-Hot" class="anchor-btn">Github</a>
+                </div>
+              </div>
+              <p>Discover Fly</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- contact section -->
+  <section class="contact-section" id="contactSection">
+    <div class="container">
+      <div class="row">
+        <div class="section-title column-100">
+          <h2 data-heading=" contact">get in touch</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center" style="padding: 80px 0 50px;">
+        <div class="column-33 row">
+          <div class="cart outer-shadow">
+            <div class="cart-body">
+              <i class="fas fa-phone"></i>
+              <span>Phone</span>
+              <p>+880 1710195661</p>
+            </div>
+          </div>
+        </div>
+        <div class="column-33 row">
+          <div class="cart outer-shadow">
+            <div class="cart-body">
+              <i class="fas fa-envelope"></i>
+              <span>Email</span>
+              <p>sabbir.fortune@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="column-33 row">
+          <div class="cart outer-shadow">
+            <div class="cart-body">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Address</span>
+              <p>Dhaka, Bangladesh</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column-50 row">
+          <form action="">
+            <input type="text" placeholder="Name" class="outer-shadow hover-in-shadow">
+            <input type="text" placeholder="Email" class="outer-shadow hover-in-shadow">
+            <input type="text" placeholder="Subject" class="outer-shadow hover-in-shadow">
+          </form>
+        </div>
+        <div class="column-50 row">
+          <textarea class="outer-shadow hover-in-shadow" placeholder="Your Massage"></textarea>
+        </div>
+      </div>
+      <div class="row justify-content-end" style="padding-right: 15px;">
+          <a href="" class="anchor-btn outer-shadow">Send Massage</a>
       </div>
     </div>
   </section>

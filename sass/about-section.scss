@@ -1,20 +1,5 @@
 .about-section {
-  .section-title {
-    padding: 80px 0;
-    h2 {
-      text-align: center;
-      text-transform: uppercase;
-      color: $text-black-900;
-      font-weight: 700;
-    }
-    h2::before {
-      content: attr(data-heading);
-      display: block;
-      font-size: 16px;
-      font-weight: 500;
-      color: $btn-color;
-    }
-  }
+  padding: 0 15px;
   .about-img {
     .img-box {
       max-width: 100%;
@@ -43,35 +28,12 @@
     span {
       font-size: large;
     }
-    a {
-      margin: 30px 5px 0;
-      font-size: 16px;
-      font-weight: 600;
-    }
   }
 }
-.about-tabs {
-  text-align: center;
-  padding: 60px 15px 50px;
-  span {
-    margin: 0 8px;
-    color: $text-black-600;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    text-transform: capitalize;
-  }
-  span.active {
-    color: $btn-color;
-  }
-}
+
+// skills tab
 .skills-wrapper {
-  display: none;
-  .column-50 {
-    padding: 0 40px;
-  }
   ul {
-    padding: 30px 0;
     li {
       margin-bottom: 70px;
       text-transform: capitalize;
@@ -145,6 +107,12 @@
       animation-name: react;
     }
   }
+.ul-left{
+  padding-right: 20px;
+}
+.ul-right{
+  padding-left: 20px;
+}
 }
 
 @keyframes html {
@@ -179,75 +147,136 @@
 }
 
 // experience tab
-.exp-wrapper {
-  .timeline {
+.timeline {
+  position: relative;
+  .left-item {
+    left: 0;
+    width: 50%;
+    padding: 0 40px 0 50px;
     position: relative;
-    .left-item {
-      left: 0;
-      width: 50%;
-      padding: 0 40px 0 50px;
-      position: relative;
-      .content {
-        padding: 35px 30px;
-        text-align: right;
-      }
-      .content::after {
-        content: "";
-        position: absolute;
-        top: 17px;
-        right: 18px;
-        width: 20px;
-        height: 1px;
-        background-color: red;
-      }
+    i {
+      position: absolute;
+      top: 38px;
+      right: -9px;
+      color: $btn-color;
+      z-index: 2;
     }
-    .left-item::after {
+    .content {
+      padding: 35px 30px;
+      text-align: right;
+    }
+    .content::after {
       content: "";
       position: absolute;
-      top: 0;
-      right: -19px;
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      border: 1px solid red;
-    }
-    .right-item {
-      left: 50%;
-      width: 50%;
-      padding: 0 50px 0 40px;
-      position: relative;
-      .content {
-        padding: 35px 30px;
-        position: relative;
-      }
-      .content::before {
-        content: "";
-        position: absolute;
-        top: 17px;
-        left: -20px;
-        width: 20px;
-        height: 1px;
-        background-color: red;
-      }
-    }
-    .right-item::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -17px;
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      border: 1px solid red;
+      top: 47px;
+      right: 18px;
+      width: 20px;
+      height: 1px;
+      background-color: $bg-black-100;
     }
   }
-  .timeline::after {
+  .left-item::after {
     content: "";
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 28px;
+    right: -19px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid $bg-black-100;
+    background-color: $bg-black-50;
+    z-index: 1;
+  }
+  .right-item {
     left: 50%;
-    background-color: #fff;
-    width: 2px;
+    width: 50%;
+    padding: 0 50px 0 40px;
+    position: relative;
+    i {
+      position: absolute;
+      top: 39px;
+      left: -7px;
+      color: $btn-color;
+      z-index: 2;
+    }
+    .content {
+      padding: 35px 30px;
+      position: relative;
+    }
+    .content::before {
+      content: "";
+      position: absolute;
+      top: 48px;
+      left: -20px;
+      width: 20px;
+      height: 1px;
+      background-color: $bg-black-100;
+    }
+  }
+  .right-item::before {
+    content: "";
+    position: absolute;
+    top: 29px;
+    left: -17px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid $bg-black-100;
+    background-color: $bg-black-50;
+    z-index: 1;
+  }
+  .content {
+    span {
+      font-weight: 500;
+      color: $btn-color;
+      margin: 0 0 10px;
+      text-transform: capitalize;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: $text-black-900;
+      margin: 0 0 5px;
+    }
+    h4 {
+      font-size: 16px;
+      color: $text-black-600;
+      font-style: italic;
+      margin: 0;
+    }
+    p {
+      font-size: 16px;
+      color: $text-black-600;
+      line-height: 26px;
+      margin: 15px 0 0;
+    }
+  }
+}
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  background-color: $bg-black-100;
+  width: 1px;
+}
+
+// education tab
+.display-block{
+  display: block;
+  animation: fadeInTop 1s ease;
+}
+.display-none{
+  display: none;
+}
+@keyframes  fadeInTop{
+  0%{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
