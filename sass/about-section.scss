@@ -25,9 +25,31 @@
   }
   .about-text {
     padding-left: 50px;
+    p{
+      font-size: 16px;
+      color: $text-black-600;
+      font-weight: 500;
+    }
     span {
       font-size: large;
+      font-weight: 600;
     }
+  }
+  .tab-wrapper {
+    text-align: center;
+    padding: 60px 15px 50px;
+    span {
+      margin: 0 8px;
+      color: $text-black-600;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      text-transform: capitalize;
+    }
+    .activeTabBtn{
+      color: $btn-color;
+      box-shadow: $inner-shadow;
+      }
   }
 }
 

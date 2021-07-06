@@ -7,23 +7,23 @@ function closeNabMenu(){
     navMenu.style.display = "none"
 }
 function homeNav(e){
-    currentActiveBtn(e)
+    currentActiveBtnMenu(e)
     navMenu.style.display = "none"
 }
 function aboutNav(e){
-    currentActiveBtn(e)
+    currentActiveBtnMenu(e)
     navMenu.style.display = "none"
 }
 function servicesNav (e){
-    currentActiveBtn(e)
+    currentActiveBtnMenu(e)
     navMenu.style.display = "none"
 }
 function portfolioNav (e){
-    currentActiveBtn(e)
+    currentActiveBtnMenu(e)
     navMenu.style.display = "none"
 }
 function contactNav(e){
-    currentActiveBtn(e)
+    currentActiveBtnMenu(e)
     navMenu.style.display = "none"
 }
 // about tabs section
@@ -45,12 +45,16 @@ function educationTab(e){
     const educationWrapper = document.querySelector(".education-wrapper");
     educationWrapper.className = educationWrapper.className.replace("display-none", "display-block",)
 }
-
-function currentActiveBtn(targetedBtn){
+function currentActiveBtnMenu(targetedBtn){
     const currentActiveTab = document.querySelector(".active");
     currentActiveTab.className = currentActiveTab.className.replace("active", " ")
-    currentActiveTab.className = currentActiveTab.className.replace("inner-shadow", "outer-shadow")
-    targetedBtn.className+= " active inner-shadow"
+    targetedBtn.className+= " active"
+}
+
+function currentActiveBtn(targetedBtn){
+    const currentActiveTab = document.querySelector(".activeTabBtn");
+    currentActiveTab.className = currentActiveTab.className.replace("activeTabBtn", " ")
+    targetedBtn.className+= " activeTabBtn"
 }
 function hideCurrentItem(){
     const displayBlock = document.querySelector(".display-block");

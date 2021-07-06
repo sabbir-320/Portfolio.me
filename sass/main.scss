@@ -126,22 +126,6 @@ img {
     color: $btn-color;
   }
 }
-// tabs buttons
-.tab-wrapper {
-  text-align: center;
-  padding: 60px 15px 50px;
-  span {
-    margin: 0 8px;
-    color: $text-black-600;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    text-transform: capitalize;
-  }
-  span.active {
-    color: $btn-color;
-  }
-}
 .cart {
   width: 100%;
   height: auto;

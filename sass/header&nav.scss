@@ -87,10 +87,10 @@
           font-weight: 600;
           overflow-y: auto;
         }
-        a.active{
-        color: $btn-color;
-        box-shadow: $inner-shadow;
-        }
+        .active{
+          color: $btn-color;
+          box-shadow: $inner-shadow;
+          }
       }
     }
   }

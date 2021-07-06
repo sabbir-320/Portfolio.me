@@ -136,22 +136,6 @@ img {
   color: #fb839e;
 }
 
-.tab-wrapper {
-  text-align: center;
-  padding: 60px 15px 50px;
-}
-.tab-wrapper span {
-  margin: 0 8px;
-  color: #666666;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  text-transform: capitalize;
-}
-.tab-wrapper span.active {
-  color: #fb839e;
-}
-
 .cart {
   width: 100%;
   height: auto;
@@ -249,7 +233,7 @@ img {
   font-weight: 600;
   overflow-y: auto;
 }
-.nav-menu .inner-nav-menu ul li a.active {
+.nav-menu .inner-nav-menu ul li .active {
   color: #fb839e;
   box-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
 }
@@ -396,8 +380,30 @@ img {
 .about-section .about-text {
   padding-left: 50px;
 }
+.about-section .about-text p {
+  font-size: 16px;
+  color: #666666;
+  font-weight: 500;
+}
 .about-section .about-text span {
   font-size: large;
+  font-weight: 600;
+}
+.about-section .tab-wrapper {
+  text-align: center;
+  padding: 60px 15px 50px;
+}
+.about-section .tab-wrapper span {
+  margin: 0 8px;
+  color: #666666;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.about-section .tab-wrapper .activeTabBtn {
+  color: #fb839e;
+  box-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
 }
 
 .skills-wrapper ul li {
